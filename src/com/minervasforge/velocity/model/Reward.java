@@ -1,4 +1,4 @@
-package com.minervasforge.velocity.models;
+package com.minervasforge.velocity.model;
 
 import java.io.Serializable;
 
