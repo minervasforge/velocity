@@ -1,4 +1,4 @@
-package com.minervasforge.velocity.userInterface;
+package com.minervasforge.velocity.view;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.minervasforge.velocity.userInterface;
+package com.minervasforge.velocity.view;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

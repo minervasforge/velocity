@@ -1,4 +1,4 @@
-package com.minervasforge.velocity.userInterface;
+package com.minervasforge.velocity.view;
 
 import com.minervasforge.velocity.models.PointWallet;
 import com.minervasforge.velocity.models.Reward;

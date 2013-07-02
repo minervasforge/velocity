@@ -1,4 +1,4 @@
-package com.minervasforge.velocity.userInterface;
+package com.minervasforge.velocity.view;
 
 import com.minervasforge.velocity.models.PointWallet;
 import com.minervasforge.velocity.models.Reward;
@@ -8,9 +8,6 @@ import com.minervasforge.velocity.persistence.Persister;
 import com.minervasforge.velocity.persistence.RewardRepository;
 import com.minervasforge.velocity.persistence.SkillRepository;
 import com.minervasforge.velocity.persistence.TaskRepository;
-import com.minervasforge.velocity.userInterface.Command;
-import com.minervasforge.velocity.userInterface.CommandLineInterface;
-import com.minervasforge.velocity.userInterface.CommandReader;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

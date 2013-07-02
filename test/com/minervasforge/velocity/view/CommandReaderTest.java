@@ -1,7 +1,5 @@
-package com.minervasforge.velocity.userInterface;
+package com.minervasforge.velocity.view;
 
-import com.minervasforge.velocity.userInterface.Command;
-import com.minervasforge.velocity.userInterface.CommandReader;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
