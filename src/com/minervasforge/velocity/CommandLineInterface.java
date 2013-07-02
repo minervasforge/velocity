@@ -145,13 +145,11 @@ public class CommandLineInterface {
 
     public void loadRepositories(ObjectInputStream dataForLoading) {
         try {
-            taskRepository = (TaskRepository) persister.load(dataForLoading, TaskRepository.class);
-            pointWallet = (PointWallet) persister.load(dataForLoading, PointWallet.class);
-            rewardRepository = (RewardRepository) persister.load(dataForLoading, RewardRepository.class);
-            skillRepository = (SkillRepository) persister.load(dataForLoading, SkillRepository.class);
-//            dataForLoading.close();
+            taskRepository = (TaskRepository) persister.load(dataForLoading);
+            pointWallet = (PointWallet) persister.load(dataForLoading);
+            rewardRepository = (RewardRepository) persister.load(dataForLoading);
+            skillRepository = (SkillRepository) persister.load(dataForLoading);
         } catch (IOException e) {
-//        	e.printStackTrace();
             initiateNewRepositories();
         } catch (ClassNotFoundException e) {
             System.out.println("Class Not Found" + e.getMessage());

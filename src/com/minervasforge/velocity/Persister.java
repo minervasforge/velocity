@@ -21,19 +21,12 @@ public class Persister implements Serializable {
             out.writeObject(skillRepository);
         } catch (IOException e) {
             e.printStackTrace();
-        }// finally {
-//			try {
-//				out.close();
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
+        }
     }
 
-
-    public Object load(ObjectInputStream objectInputStream, Class objectClass) throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
+	public Object load(ObjectInputStream objectInputStream)
+            throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         return objectInputStream.readObject();
     }
-
 
 }
