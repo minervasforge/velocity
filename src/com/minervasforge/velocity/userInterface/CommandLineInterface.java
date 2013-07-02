@@ -1,4 +1,13 @@
-package com.minervasforge.velocity;
+package com.minervasforge.velocity.userInterface;
+
+import com.minervasforge.velocity.models.PointWallet;
+import com.minervasforge.velocity.models.Reward;
+import com.minervasforge.velocity.models.Skill;
+import com.minervasforge.velocity.models.Task;
+import com.minervasforge.velocity.persistence.Persister;
+import com.minervasforge.velocity.persistence.RewardRepository;
+import com.minervasforge.velocity.persistence.SkillRepository;
+import com.minervasforge.velocity.persistence.TaskRepository;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.String.format;

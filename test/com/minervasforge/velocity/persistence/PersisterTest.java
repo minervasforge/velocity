@@ -1,6 +1,9 @@
-package com.minervasforge.velocity;
+package com.minervasforge.velocity.persistence;
 
-import org.junit.Before;
+import com.minervasforge.velocity.models.PointWallet;
+import com.minervasforge.velocity.models.Reward;
+import com.minervasforge.velocity.models.Skill;
+import com.minervasforge.velocity.models.Task;
 import org.junit.Test;
 
 import java.io.*;

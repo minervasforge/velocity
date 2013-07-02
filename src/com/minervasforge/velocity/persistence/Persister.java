@@ -1,4 +1,6 @@
-package com.minervasforge.velocity;
+package com.minervasforge.velocity.persistence;
+
+import com.minervasforge.velocity.models.PointWallet;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

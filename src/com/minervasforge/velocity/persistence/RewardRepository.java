@@ -1,4 +1,7 @@
-package com.minervasforge.velocity;
+package com.minervasforge.velocity.persistence;
+
+import com.minervasforge.velocity.models.PointWallet;
+import com.minervasforge.velocity.models.Reward;
 
 import java.io.Serializable;
 import java.util.ArrayList;
