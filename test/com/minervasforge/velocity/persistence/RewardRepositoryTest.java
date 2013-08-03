@@ -1,7 +1,7 @@
 package com.minervasforge.velocity.persistence;
 
-import com.minervasforge.velocity.models.PointWallet;
-import com.minervasforge.velocity.models.Reward;
+import com.minervasforge.velocity.model.PointWallet;
+import com.minervasforge.velocity.model.Reward;
 import org.junit.Test;
 
 import java.util.Arrays;

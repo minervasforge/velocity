@@ -1,6 +1,6 @@
 package com.minervasforge.velocity.persistence;
 
-import com.minervasforge.velocity.models.Task;
+import com.minervasforge.velocity.model.Task;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 

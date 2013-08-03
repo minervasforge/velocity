@@ -1,9 +1,9 @@
 package com.minervasforge.velocity.view;
 
-import com.minervasforge.velocity.models.PointWallet;
-import com.minervasforge.velocity.models.Reward;
-import com.minervasforge.velocity.models.Skill;
-import com.minervasforge.velocity.models.Task;
+import com.minervasforge.velocity.model.PointWallet;
+import com.minervasforge.velocity.model.Reward;
+import com.minervasforge.velocity.model.Skill;
+import com.minervasforge.velocity.model.Task;
 import com.minervasforge.velocity.persistence.Persister;
 import com.minervasforge.velocity.persistence.RewardRepository;
 import com.minervasforge.velocity.persistence.SkillRepository;
@@ -15,6 +15,7 @@ import org.mockito.Mock;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
@@ -41,6 +42,10 @@ public class CommandLineInterfaceTest {
 
     @InjectMocks
     private CommandLineInterface commandLineInterface;
+
+    private final List<Reward> rewards = asList(Reward.createSmallReward("3 hour nap"),
+            Reward.createSmallReward("a piece of chocolate"),
+            Reward.createSmallReward("a kiss from my girlfriend"));
 
     @Before
     public void setup() throws Exception {
@@ -259,10 +264,7 @@ public class CommandLineInterfaceTest {
     public void shouldAllowUserToGetRewardIfTheyHaveEnoughPoints()
             throws IOException {
         when(commandReader.nextCommand()).thenReturn(new Command("get", "2"));
-        when(rewardRepository.getAll()).thenReturn(
-                asList(Reward.createSmallReward("3 hour nap"),
-                        Reward.createSmallReward("a piece of chocolate"),
-                        Reward.createSmallReward("a kiss from my girlfriend")));
+        when(rewardRepository.getAll()).thenReturn(rewards);
         when(rewardRepository.canAward(Reward.createSmallReward("a piece of chocolate"),
                 pointWallet)).thenReturn(true);
 
@@ -279,9 +281,7 @@ public class CommandLineInterfaceTest {
             throws IOException {
         when(commandReader.nextCommand()).thenReturn(new Command("get", "1"));
         when(rewardRepository.getAll()).thenReturn(
-                asList(Reward.createSmallReward("3 hour nap"),
-                        Reward.createSmallReward("a piece of chocolate"),
-                        Reward.createSmallReward("a kiss from my girlfriend")));
+                rewards);
         when(pointWallet.getTotalPoints()).thenReturn(5);
 
         commandLineInterface.processNextCommand();

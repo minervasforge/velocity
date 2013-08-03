@@ -1,20 +1,20 @@
 package com.minervasforge.velocity.view;
 
-import com.minervasforge.velocity.models.PointWallet;
-import com.minervasforge.velocity.models.Reward;
-import com.minervasforge.velocity.models.Skill;
-import com.minervasforge.velocity.models.Task;
+import com.minervasforge.velocity.model.PointWallet;
+import com.minervasforge.velocity.model.Reward;
+import com.minervasforge.velocity.model.Skill;
+import com.minervasforge.velocity.model.Task;
 import com.minervasforge.velocity.persistence.Persister;
 import com.minervasforge.velocity.persistence.RewardRepository;
 import com.minervasforge.velocity.persistence.SkillRepository;
 import com.minervasforge.velocity.persistence.TaskRepository;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.String.format;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
+
+import static java.lang.Integer.parseInt;
+import static java.lang.String.format;
 
 public class CommandLineInterface {
     private boolean quitFlag = false;
@@ -149,7 +149,14 @@ public class CommandLineInterface {
 
     private void addTaskCommand(Command command) {
         String arguments = command.getArguments();
+        if ("".equals(arguments)){
+            out.append("Your command was incomplete.");
+            out.flush();
+            return;
+        }
         taskRepository.add(new Task(arguments));
+        out.append("Task successfully created!");
+        out.flush();
     }
 
     public void loadRepositories(ObjectInputStream dataForLoading) {

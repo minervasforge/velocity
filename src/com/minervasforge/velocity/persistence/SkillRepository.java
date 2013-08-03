@@ -1,6 +1,6 @@
 package com.minervasforge.velocity.persistence;
 
-import com.minervasforge.velocity.models.Skill;
+import com.minervasforge.velocity.model.Skill;
 
 import java.io.Serializable;
 import java.util.ArrayList;

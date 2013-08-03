@@ -1,6 +1,6 @@
 package com.minervasforge.velocity.persistence;
 
-import com.minervasforge.velocity.models.Task;
+import com.minervasforge.velocity.model.Task;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;

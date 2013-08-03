@@ -35,8 +35,6 @@ public class PointWalletTest {
         assertThat(pointWallet.getTotalPoints(), is(2));
     }
 
-
-
     private void awardTenPoints(PointWallet pointWallet) {
         pointWallet.awardPoints();
         pointWallet.awardPoints();
